@@ -17,6 +17,7 @@ func main() {
 	wg.Add(numGoroutines)
 
 	for i := 0; i < numGoroutines; i++ {
+
 		go func(id int) {
 			defer wg.Done()
 

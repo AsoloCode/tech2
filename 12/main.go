@@ -4,8 +4,8 @@ import "fmt"
 
 func main() {
 	arr := []string{"cat", "cat", "dog", "cat", "cat", "tree"}
-	var res []string
 	hashMap := make(map[string]struct{})
+	var res []string
 
 	// Итерируемся по массиву и записываем в хеш таблицу ключом элемент массива
 	for _, val := range arr {

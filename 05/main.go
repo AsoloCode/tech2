@@ -11,6 +11,7 @@ func main() {
 	go func() {
 		timer := time.NewTimer(duration) // устанавливаем таймер
 		defer close(cnSender)            // закрываем канал после того как завершится горутина
+
 		for {
 			select {
 			case <-timer.C: //если таймер срабатывает то выполняется этот кейс

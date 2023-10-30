@@ -29,6 +29,7 @@ func main() {
 	// Запускаем несколько горутин, которые инкрементируют счетчик
 	for i := 0; i < 10; i++ {
 		wg.Add(1)
+		
 		go func() {
 			defer wg.Done()
 			counter.Increment()

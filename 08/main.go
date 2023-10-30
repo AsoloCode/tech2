@@ -5,6 +5,7 @@ import (
 )
 
 func setBit(n int64, pos int, bit int) int64 {
+
 	if bit == 1 {
 		// Устанавливаем i-й бит в 1 с помощью битового ИЛИ
 		return n | (1 << pos)

@@ -19,6 +19,7 @@ func binarySearch(list []int, item int) (int, bool) {
 	for low <= high {
 		mid := low + high
 		guess := list[mid]
+
 		if guess == item {
 			return mid, true
 		} else if guess > item {

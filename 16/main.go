@@ -8,6 +8,7 @@ func main() {
 }
 
 func quickSort(arr []int) []int {
+
 	if len(arr) < 2 {
 		return arr
 	}

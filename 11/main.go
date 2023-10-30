@@ -28,6 +28,5 @@ func cross(a1, a2 []int) []int {
 			hashMap[num] = false
 		}
 	}
-
 	return res
 }

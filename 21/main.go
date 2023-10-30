@@ -32,6 +32,7 @@ type JsonDocAdapter struct {
 func (adapter JsonDocAdapter) SendXmlData() {
 	// В адаптере происходит вызов метода преобразования JSON в XML
 	xmlData := adapter.jsonDocument.ConvertToXml()
+
 	// Затем отправка XML данных
 	fmt.Println("Отправка XML данных:", xmlData)
 }
