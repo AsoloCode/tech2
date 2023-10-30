@@ -41,6 +41,7 @@ func main() {
 			jobTitle:   "Middle Backend",
 		},
 	}
+
 	a.Speak()
 	a.MyActivity()
 

@@ -13,6 +13,7 @@ func main() {
 
 	for _, num := range numbers {
 		wg.Add(1)
+
 		go func(n int) { //создается горутина для каждого числа
 			defer wg.Done()         //уменьшает счетчик синхронизации wg
 			square := n * n         //квадрат

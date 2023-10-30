@@ -12,6 +12,7 @@ func main() {
 	var wg sync.WaitGroup
 	for _, num := range numbers {
 		wg.Add(1)
+
 		go func(n int) {
 			defer wg.Done()
 			square := n * n

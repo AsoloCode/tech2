@@ -17,13 +17,15 @@ func main() {
 
 	// Запускаем воркеров
 	for i := 0; i < numWorkers; i++ {
-		wg.Add(1)                            //увеличиваем счетчик ожидания
+		wg.Add(1)
+		//увеличиваем счетчик ожидания
 		go worker(i, dataChannel, done, &wg) //новая горутина которая выполняет функцию worker
 	}
 
 	// Запускаем горутину для записи данных в канал
 	go func() {
 		defer close(dataChannel)
+
 		for i := 1; i <= 10; i++ {
 			dataChannel <- i
 		}
@@ -42,6 +44,7 @@ func main() {
 func worker(id int, dataChannel <-chan int, done <-chan struct{}, wg *sync.WaitGroup) {
 	defer wg.Done()
 	fmt.Printf("Воркер %d начал работу\n", id)
+
 	for {
 		select {
 		case data, ok := <-dataChannel: //Если данные доступны в dataChannel, воркер считывает данные из канала и выводит сообщение, указывая, что он получил данные.
